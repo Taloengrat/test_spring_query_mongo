@@ -3,6 +3,9 @@ package Models;
 import com.sun.istack.NotNull;
 
 import lombok.*;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,7 +15,8 @@ import javax.validation.constraints.Email;
 @Getter
 @Setter
 @ToString
-@Document(collection = "Book")
+@Document(collection = "BookStore")
+@Configuration
 public class Book {
     @Id
     private int id;
